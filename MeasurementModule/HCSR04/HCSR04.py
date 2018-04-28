@@ -7,8 +7,8 @@ u'''
 * 版  本：V0.10
 * 作  者：Robin Chen
 * 日  期：2018年4月27日
-* 历  史：         日期              编辑          版本      记录
-                2018年4月27日      Robin Chen   V0.10    创建文件
+* 历  史：  日期              编辑          版本      记录
+           2018年4月27日     Robin Chen   V0.10    创建文件
 ******************************************************************************'''
 
 from pyb import Pin
@@ -36,7 +36,7 @@ def getlang():
         pass
     if echo.value() == 1:
         ts=ticks_us()                   #开始时间
-        while echo.value() == 1:
+        while echo.value() == 1:        #等待脉冲高电平结束
             pass
         te=ticks_us()                   #结束时间
         tc=te-ts                        #回响时间（单位us）
